@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.xtoon</groupId>
+	<artifactId>xtoon-boot</artifactId>
+	<packaging>pom</packaging>
+	<version>1.0</version>
+	<modules>
+		<module>xtoon-common</module>
+		<module>xtoon-sys</module>
+		<module>xtoon-org</module>
+        <module>xtoon-api</module>
+    </modules>
+	<name>xtoon-boot</name>
+	<description>xtoon-boot是一款基于DDD的单体应用脚手架</description>
+
+	<developers>
+		<developer>
+			<id>xin</id>
+			<name>haoxin</name>
+			<organization>xiangtoon, Inc.</organization>
+			<organizationUrl>http://www.xiangtoon.com</organizationUrl>
+		</developer>
+	</developers>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.4.2</version>
+		<relativePath/>
+	</parent>
+
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+			<resource>
+				<directory>src/main/java</directory>
+				<includes>
+					<include>**/*.xml</include>
+					<include>**/*.json</include>
+					<include>**/*.ftl</include>
+				</includes>
+			</resource>
+		</resources>
+	</build>
+
+	<repositories>
+		<repository>
+			<id>nexus-aliyun</id>
+			<name>nexus-aliyun</name>
+			<url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+</project>
